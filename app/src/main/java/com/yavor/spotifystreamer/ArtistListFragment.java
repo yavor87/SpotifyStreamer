@@ -1,6 +1,5 @@
 package com.yavor.spotifystreamer;
 
-
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -14,9 +13,10 @@ import android.widget.TextView;
 
 public class ArtistListFragment extends ListFragment {
 
+    private static final String TAG = ArtistListFragment.class.getSimpleName();
+
     public ArtistListFragment() {
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,6 +39,6 @@ public class ArtistListFragment extends ListFragment {
     }
 
     void performSearch(String text) {
-        Log.v(this.getClass().getSimpleName(), text);
+        Log.v(TAG, "Doing a search for " + text);
     }
 }
