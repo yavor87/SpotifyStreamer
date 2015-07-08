@@ -5,9 +5,8 @@
     android:layout_height="?android:attr/listPreferredItemHeight">
     <ImageView
         android:id="@+id/artist_image"
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
-        android:maxWidth="30dp" android:maxHeight="30dp" />
+        android:layout_width="64dp"
+        android:layout_height="match_parent" />
     <TextView
         android:id="@+id/artist_name"
         android:layout_width="wrap_content"

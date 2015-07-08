@@ -25,6 +25,7 @@ import kaaes.spotify.webapi.android.SpotifyService;
 import kaaes.spotify.webapi.android.models.Artist;
 import kaaes.spotify.webapi.android.models.Artists;
 import kaaes.spotify.webapi.android.models.ArtistsPager;
+import kaaes.spotify.webapi.android.models.Image;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -119,7 +120,8 @@ public class ArtistListFragment extends ListFragment {
 
             Artist currentArtist = mItemsArrayList.get(position);
             if (currentArtist.images.size() > 0) {
-                Picasso.with(mContext).load(currentArtist.images.get(0).url).into(imageView);
+                Image image = currentArtist.images.get(currentArtist.images.size() - 1);
+                Picasso.with(mContext).load(image.url).into(imageView);
             }
             textView.setText(currentArtist.name);
 
